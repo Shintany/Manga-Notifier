@@ -6,9 +6,14 @@
 
 import bs4
 import urllib
+import requests
+
+# Include needed classes
+from classes.MangaNotifier import MangaNotifier
 
 if __name__ == '__main__':
-    
+    print('Hello I\'m the main program') 
+
 else:
     print('main.py file is not supposed to be call by another program....')
     quit()
