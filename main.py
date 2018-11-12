@@ -11,12 +11,13 @@ import requests
 # Include needed classes
 from classes.MangaNotifier import MangaNotifier
 from classes.MyParser import MyParser
+from classes.MyDatabase import MyDatabase
 
 if __name__ == '__main__':
     # print('Hello I\'m the main program') 
 
     # Declaring essential vars
-    website_url   = "https://manganelo.com/home"
+    website_url   = "https://manganelo.com/manga_list?type=topview&category=all&state=all&page=1"
     database_path = "list.csv"
     parser = MyParser(website_url) 
 else:

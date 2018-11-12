@@ -17,5 +17,12 @@ class MyParser():
             print("Error code : " + str(response.status_code))
             quit()
         else:
-            print("Website is responding!")
+            # print("Website is responding!")
+            page_src = response.text
+            soup = BeautifulSoup(page_src, 'lxml')
 
+            # Search for <div class="list-truyen-item-wrap">
+            content = soup.find('a', {'title' : 'One Piece'})
+            
+            # Check if the script found the correct manga url
+            print(content['href'])
